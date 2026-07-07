@@ -1,0 +1,162 @@
+Transistor → Bit → Byte → Data → Segment → Packet → Frame → Bits → Switch → Router → Internet → Destination
+before packet send
+You type:
+www.google.com
+        │
+        ▼
+Computer asks DNS
+        │
+        ▼
+DNS returns Google's IP Address
+        │
+        ▼
+Computer creates Packet
+   
+            
+                computer decide 
+                Destination IP
+        │
+        ▼
+Same Network?
+      │
+ ┌────┴────┐
+ │         │
+Yes        No
+ │         │
+ ▼         ▼
+Switch   Router
+
+| Device      | Main Job                              | Uses           |
+| ----------- | ------------------------------------- | -------------- |
+| Switch      | Connects devices in the same LAN      | MAC Address    |
+| Router      | Connects different networks           | IP Address     |
+| DHCP Server | Assigns IP addresses  in lan                | DHCP           |
+| DNS Server  | Converts domain names to IP addresses | DNS            |
+| ISP         | Connects your network to the Internet | Public network |
+
+
+
+                    USER
+                     │
+                     ▼
+         You type "www.google.com"
+                     │
+                     ▼
+          Application (Chrome)
+                     │
+                     ▼
+      Converts characters into binary
+                     │
+                     ▼
+        Transistors (ON = 1, OFF = 0)
+                     │
+                     ▼
+                  Bits (0 & 1)
+                     │
+                     ▼
+               8 Bits = 1 Byte
+                     │
+                     ▼
+      Data ("www.google.com")
+                     │
+                     ▼
+     dns = destination ip                
+──────────────────────────────────────────
+OSI Layer 4 (Transport)
+──────────────────────────────────────────
+TCP/UDP
+│
+├── Splits large data into Segments
+├── Adds Source Port own device temporarly assign unused port
+└── Adds Destination Port httos 443,ssh 22,http 80 dns 53 = decide which application run that device
+                     │
+                     ▼
+                 Segment
+                     │
+──────────────────────────────────────────
+OSI Layer 3 (Network)
+──────────────────────────────────────────
+IP Protocol
+│
+├── Source IP
+├── Destination IP =to identify the devices
+└── Routing Information
+                     │
+                     ▼
+                  Packet
+                     │
+──────────────────────────────────────────
+OSI Layer 2 (Data Link)
+──────────────────────────────────────────
+Ethernet
+│
+├── Source MAC 
+├── Destination MAC  arp get the mac addrs
+└── Error Check (FCS)
+                     │
+                     ▼
+                   Frame
+                     │
+──────────────────────────────────────────
+OSI Layer 1 (Physical)
+──────────────────────────────────────────
+Converts Frame into Bits
+                     │
+                     ▼
+Electrical Signals (Ethernet)
+        OR
+Radio Waves (Wi-Fi)
+                     │
+                     ▼
+                Switch
+                     │
+Reads Destination MAC
+                     │
+Looks in MAC Address Table
+                     │
+Sends Frame to Correct Port = is a switch port
+                     │
+                     ▼
+                Router
+                     │
+Removes Ethernet Frame
+Reads Destination IP
+                     │
+Checks Routing Table
+                     │
+If Local → Send Locally cheching the newtwork id
+If Remote → Send to ISP
+                     │
+                     ▼
+                 ISP Router
+                     │
+                     ▼
+         Internet (Many Routers)
+                     │
+      Every Router Checks IP
+                     │
+      Chooses Next Best Route
+                     │
+                     ▼
+          Google's Edge Router
+                     │
+                     ▼
+            Google Server
+                     │
+Processes Your Request
+                     │
+Creates Response
+                     │
+Same Process in Reverse
+                     ▼
+Internet
+     │
+ISP
+     │
+Router public ip
+     │
+Switch assign a private ip to all devices in lan using dhcp
+     │
+Laptop
+     │
+Chrome Displays Google Page

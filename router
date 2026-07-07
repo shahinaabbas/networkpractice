@@ -1,0 +1,13 @@
+router is layer3 network device that connect the other network and forward data tha packet using ip address
+router  maintain a routing table (destination netwrk| next hop)
+when a router recive a poacket
+       it read the destination  ip address
+       chech the routing table
+       choose the best path
+       | Switch                      | Router                      |
+| --------------------------- | --------------------------- |
+| Layer 2                     | Layer 3                     |
+| Uses MAC Address            | Uses IP Address             |
+| Connects devices in one LAN | Connects different networks |
+| Forwards Frames             | Forwards Packets            |
+computer 1-> dns -> ip adress -> packet add -> router (routing table check not match the lan piblic ip address it knoew the isp ip addrerss so forward into isp router)-> isp router chech its routing table then follow next router by router choosing the best path->network-> router -> server

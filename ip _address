@@ -1,0 +1,45 @@
+An IP (Internet Protocol) Address is a logical address that uniquely identifies a device on a network so data can be sent to the correct destination.
+| MAC Address                          | IP                                      |
+| ------------------------------------ | -------------------------------
+| Physical address                     | Logical                                  |
+| Built into the network card          | Assigned by the network (or configured ma
+| Used by switches                     | router                                 |
+| Works within the local network (LAN) | communicate across network           |
+ 
+      DHCP (Dynamic Host Configuration Protocol).
+      using this, wifi router gives ip address to the devices in the lan
+
+ Laptop
+192.168.1.10
+        │
+        ▼
+Compare Destination IP
+        │
+        ▼
+Same Network?
+        │
+ ┌──────┴──────┐
+ │             │
+Yes            No
+ │             │
+ ▼             ▼
+Switch       Router
+
+Network ID identifies the network. first 3 octate
+Host ID identifies a specific device within that network.last one
+
+
+https 443
+http 80
+ssh 22
+dns 53
+source port =os temporarly assign a unused port
+ip= which computer
+port number = which application that computer
+
+arp= address  resolution protocol
+ip adrs -> find mac adtress
+ switch send arp requast
+ |
+ arp reply with mac
+ 
