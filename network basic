@@ -1,0 +1,24 @@
+what is network
+   network is group of two or more devices connected together to communicate ,share files or resoures
+
+components
+  end devices : lap,phone,orinter
+  network devices : router ,switch,firewall..
+protocol :is a law  that a device will follow for communicate
+transmission mediam :channel is used to transfer the data wired or wireless
+advantages
+        .centralised storage
+         remote access
+         share resoures and files
+         security
+         network access
+property of good network
+     scalability
+     security
+    reliability
+    speed
+types
+   lan,wan,man,pan
+eg computer 1 -> router -> internet -> router -> computer b
+computer 1-> switch(connect ur devices in local area netwrk/wired on lan) ->router(gate way of ur home network)-> firewall(security guard)-> modem (connect ur home ntwrk to isp)->
+internet(router-router....)modem -> firewall->router->switch -> computer 2
