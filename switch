@@ -1,0 +1,43 @@
+switch is network device that connect the devices in a local area network
+it is wired lan by using ethernet cable
+it send the data to correct destination bt their mac adress
+switch maintain a mac address table (device name | port)
+
+new device = to know their mac address process is called flooding
+  that is it send a frames to all devices expet incomming one and the new device is replis and switch get its mac addressand stored on port
+  mac address=media access control
+  it is a unique physical adress assign to a network device
+  used inside a lan
+  used by switches
+port is like socket on switch to plug the ethernet cable
+ mac
+   48 bit,6 bytes 
+   It contains 6 groups, and each group has 2 hexadecimal digits.
+   00 : 1A : 2B : 3C : 4D : 5E
+    he first 3 bytes (first 6 hexadecimal digits) identify the manufacturer.
+    last 3 bytes dDevice Identifier
+    frames
+        data transfer  in the lan in the form of frames
+     structure 
+     destination mac address
+     source mac address
+     type =ipv4,ipv6
+     data = packet
+     error cheching fcs(frame check seq)
+You open Chrome
+        │
+Application Layer (7)
+        │
+Transport Layer (4)
+Creates Segments
+        │
+Network Layer (3)
+Creates Packets (IP Address)
+        │
+Data Link Layer (2)
+Creates Frames (MAC Address)
+        │
+Physical Layer (1)
+Converts Frames into Bits (0s and 1s)
+        │
+Ethernet Cable / Wi-Fi
