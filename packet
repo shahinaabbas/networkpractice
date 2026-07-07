@@ -1,0 +1,49 @@
+data is devided into multiple segments is called packets/small unit of data sent over the network
+structure
+header payload trailer
+header= address information,packet number,protocol
+payload = actual data
+trailer= error cheching information
+
+bit
+  smallest unit of data in a computer
+  0=off 1=on computer only understand the binary /state of transistor
+  bytes
+  1 byte = 8 bit
+  1 Bit                                           Mb = Megabit          Mbps (Megabits per second) measures network speed.
+                                                                                MB (Megabytes) measures file size.
+                                                   MB = Megabyte
+     ↓
+8 Bits = 1 Byte
+     ↓
+1024 Bytes = 1 KB
+     ↓
+1024 KB = 1 MB
+     ↓
+1024 MB = 1 GB
+     ↓
+1024 GB = 1 TB
+packet switching 
+packet switching is the process of sending data across the netwrk by breaking into small packet
+ach packet is sent independently through the network and is reassembled at the destination.     routers choose the best path for packets.
+This process is called switching
+
+
+                                  Packet Switching Methodologies
+
+  There are 3 packet switching methodologies:
+
+Store-and-Forward    
+Cut-Through
+Fragment-Free 
+                      Store-and-Forward  = commenly used prioritize  the reliability and error cheching
+switch
+Receives the complete packet.
+Checks if it is damaged.
+If everything is correct, forwards it. 
+                         cut through
+switch does not wait for the entire packet itb recive destination adress it forward it 
+
+                       fragment free 
+it wait the first 64 bytes( reduce the chance of forwarding the damaged frame)  then error cheching then forward it
+
