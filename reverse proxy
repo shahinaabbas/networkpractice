@@ -1,0 +1,17 @@
+reverse proxy is a server placed btw user and backend server
+it recieve client req
+and forward them to correct backend server
+client -> load balancer -> reverse proxy-> backend server
+reverse proxy also perform load balancer
+
+
+| Reverse Proxy                    | Load Balancer                                |
+| -------------------------------- | -------------------------------------------- |
+| Sits in front of backend servers | Sits in front of multiple servers            |
+| Receives and forwards requests   | Distributes traffic                          |
+| Can hide backend servers         | Prevents one server from becoming overloaded |
+| Can handle TLS and caching       | Performs health checks                       |
+| Can route by URL path            | Selects a healthy server                     |
+
+
+Client requests → Load balancer distributes → Reverse proxy routes → Backend server processes.
