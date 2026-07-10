@@ -1,0 +1,5 @@
+NETWORK ADDRESS TRANSLATION
+router perform the nat
+router change the lap ip to router ip and save in NAT table
+private ip address= communicate in lan
+public ip get from isp through dhcp = it used to communicate with internet
