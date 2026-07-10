@@ -1,0 +1,20 @@
+LOAD BALANCER  =   it prvent one server recive the all thr requast
+   it distibute the user requastacross the multiple server
+to improve performance availability reliability
+
+
+is uded algorith to decide where to send each req
+ROUND ROBIN
+    REQ are send to each server one by one(1->2->3)
+    it simple and work well whwn all serverr have similar capacity
+LEAST CONNECTIONS
+     load balancer check
+                        which server having a fewer active connection then send to that sever
+what if a server failer
+     load balncer regularly check the server health that is working or not
+     called HEALTH CHECK
+     failed = not send
+A load balancer distributes incoming network traffic across multiple servers to
+improve performance, scalability, reliability, and availability.
+It uses algorithms such as Round Robin or Least Connections to select a server.
+It also performs health checks and avoids sending traffic to unhealthy servers.
