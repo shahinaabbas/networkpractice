@@ -22,3 +22,9 @@ types
 eg computer 1 -> router -> internet -> router -> computer b
 computer 1-> switch(connect ur devices in local area netwrk/wired on lan) ->router(gate way of ur home network)-> firewall(security guard)-> modem (connect ur home ntwrk to isp)->
 internet(router-router....)modem -> firewall->router->switch -> computer 2
+
+| Network                           | Internet                     |
+| --------------------------------- | ---------------------------- |
+| Devices connected together        | A global network of networks |
+| Can work locally without Internet | Connects networks worldwide  |
+| Example: Your home LAN            | Example: Accessing Google    |
