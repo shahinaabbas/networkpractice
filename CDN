@@ -1,0 +1,12 @@
+A CDN = content delivery network
+
+
+is a group of servers located in different geographical locations.
+  It stores copies of website content and delivers the content from a server closer to the user.
+
+
+  website owner change their dns configuration so the domain point to the cdn-> edge server
+if content hit in  cdn->send content to the browser
+if content not found->cdn connect to main server->main send the content-> cdn( it copy the content)
+-> browser
+  owner config-> dns folloe-> cdn sekect the suitable edge server 
